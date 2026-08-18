@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Item List through Array</h1>
+    <div id="container"></div>
+    <input type="text" id="items" placeholder="enter your items">
+    <button id="addBtn">Add</button>
+
+
+    <script>
+        let container= document.getElementById("container");
+        let addBtn= document.getElementById("addBtn");
+        let items= document.getElementById("items");
+        let arr=[];
+
+        addBtn.addEventListener("click",()=>{
+            let item= items.value;
+            arr.push(item);
+            container.innerText="";
+            for(let i=0; i<arr.length; i++){
+                container.innerText+= arr[i]+"\n"
+            }
+        })
+    </script>
+</body>
+</html>
