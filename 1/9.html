@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Validations</h1>
+    <h3 id="output"></h3>
+    <input type="text" id="username" placeholder="enter username">
+    <input type="text" id="password" placeholder="enter password">
+    <button id="addBtn">Login</button>
+
+    <script>
+        let username = document.getElementById("username");
+        let password= document.getElementById("password");
+        let addBtn= document.getElementById("addBtn");
+        let output= document.getElementById("output");
+
+        addBtn.addEventListener("click",()=>{
+            let userValue= username.value;
+            let passValue= password.value;
+            if((userValue==="") || (passValue==="")){
+                output.textContent="please fill the credentials"
+            }
+            else{
+                output.textContent="Done";
+            }
+        })
+    </script>
+</body>
+</html>
