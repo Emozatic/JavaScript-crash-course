@@ -17,5 +17,15 @@
 // }
 // calculate(2,1,multiply)
 
-
+//activity 2
+function greet(name){
+    console.log("Good Morning" +name);
+}
+function bye(name){
+    console.log("Bye"+name);
+}
+function access(name, operation){
+    operation(name);
+}
+access("Lucky", bye)
 
