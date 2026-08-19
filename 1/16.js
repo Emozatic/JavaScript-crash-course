@@ -16,7 +16,7 @@ let card= [
 ]
 
 let pricing= card.reduce((sum, card)=>{
-    return sum + card.price
+    return sum + card.price 
 },0)
 
 console.log(pricing)
