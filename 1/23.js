@@ -9,7 +9,8 @@
 // person.sayName();
 
 const person= {
-    na   sayName: function(){
+    name:"Aman",
+      sayName: function(){
         let inner =()=>{
             console.log(this.name);
         };
