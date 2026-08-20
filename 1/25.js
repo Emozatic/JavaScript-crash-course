@@ -29,18 +29,30 @@
 // })
 
 //delayed promises
-let promise= new Promise((resolve, reject)=>{
-    let success= false
-    setTimeout(()=>{
-        if(success){
-            resolve("true");
-        }
-        else{
-            reject("false");
-        }
-    },2000);
+// let promise= new Promise((resolve, reject)=>{
+//     let success= false
+//     setTimeout(()=>{
+//         if(success){
+//             resolve("true");
+//         }
+//         else{
+//             reject("false");
+//         }
+//     },2000);
+// }).then((res)=>{
+//     console.log(res)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+//promise chaining
+let promise = new Promise((resolve, reject)=>{
+    let num= 10;
+    resolve(num);
 }).then((res)=>{
-    console.log(res)
-}).catch((err)=>{
-    console.log(err)
+    return res*2;
+}).then((res)=>{
+    return res+10;
+}).then((res)=>{
+    console.log(res/2)
 })
