@@ -41,15 +41,39 @@
 // console.log(createFunction(number, myFilter))
 
 //activity 3
-function myReduce(num, operation){
-    let result= 0;
-    for(let i=0; i<num.length; i++){
-        result= operation(result, num[i])
+// function myReduce(num, operation){
+//     let result= 0;
+//     for(let i=0; i<num.length; i++){
+//         result= operation(result, num[i])
+//     }
+//     return result;
+// }
+// function reducing(total, num){
+//     return total+num
+// }
+// let number= [1,2,3,4,5];
+// console.log(myReduce(number,reducing))
+
+//activity 4
+let products= [
+    {name:"Mouse", price: 500, category:"electronics"},
+    {name:"KeyBoard", price:1200, category:"electronics"},
+    {name:"Book", price:300, category:"study"},
+    {name:"Pen", price:50, category:"study"}
+]
+function mymap(products, operation){
+    let product=[]
+    for(let i=0; i<products.length; i++){
+        if(operation(products[i])){
+            product.push(products[i])
+        }
     }
-    return result;
+    return product;
 }
-function reducing(total, num){
-    return total+num
+
+function filter(product){
+    return product.category === "electronics"
 }
-let number= [1,2,3,4,5];
-console.log(myReduce(number,reducing))
+
+console.log(mymap(products, filter))
+
