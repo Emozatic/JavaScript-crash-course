@@ -18,3 +18,17 @@ const car={
 }
 
 car.showDetails();
+
+//3
+const student= {
+    name:"Rahul",
+    age: 22,
+    course: "MCA",
+    introduce:function(){
+        console.log(`my name is ${this.name}`);
+        console.log(`i am ${this.age} years old`);
+        console.log(`i am stydying ${this.course}`);
+    }
+}
+
+student.introduce();
