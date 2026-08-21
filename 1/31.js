@@ -68,3 +68,20 @@ async function putMethod(){
 }
 }
 putMethod()
+
+//delete method
+async function delMethod(){
+    try{
+    let response= await fetch("https://jsonplaceholder.typicode.com/users/5",{
+        method: "DELETE", // Specify the HTTP method
+    })
+    if(!response.ok)   {
+        throw new Error("something went wrong")
+    }
+    let data= await response.json();
+    console.log(data);
+}catch(err){
+    console.log(err)
+}
+}
+delMethod()
