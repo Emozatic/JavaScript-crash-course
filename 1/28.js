@@ -1,9 +1,12 @@
 //delays in async await 
-function getData(name, time){
+function getData(name, time, success){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            console.log(`${name} loading`)
-            resolve(`${name} loading`)
+            if(success){
+                resolve(`${name}, loading`)
+            }else{
+                reject(`${name}, failed`)
+            }
         },time)
     })
 }
@@ -30,9 +33,9 @@ function getData(name, time){
 async function start(){
     try{
         let result= await Promise.all([
-            getData("user", 2000),
-            getData("Posts", 3000),
-            getData("comments", 1500)
+            getData("user", 2000, true),
+            getData("Posts", 3000, false),
+            getData("comments", 1500, true)
         ])
         console.log(result);
     }
