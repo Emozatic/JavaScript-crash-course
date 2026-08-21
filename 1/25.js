@@ -46,13 +46,35 @@
 // })
 
 //promise chaining
-let promise = new Promise((resolve, reject)=>{
-    let num= 10;
-    resolve(num);
+// let promise = new Promise((resolve, reject)=>{
+//     let num= 10;
+//     resolve(num);
+// }).then((res)=>{
+//     return res*2;
+// }).then((res)=>{
+//     return res+10;
+// }).then((res)=>{
+//     console.log(res/2)
+// })
+
+//activity 
+function login(username, password){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(username==="lucky" || password===1234){
+                resolve("Got it");
+            }
+            else{
+                reject("Wrong credentials")
+            }
+        },2000)
+    })
+}
+login("lucky", 1234).then((res)=>{
+    console.log(res);
+    return "Fetching user profile";
 }).then((res)=>{
-    return res*2;
-}).then((res)=>{
-    return res+10;
-}).then((res)=>{
-    console.log(res/2)
+    console.log(res)
+}).catch((err)=>{
+    console.log(err)
 })
