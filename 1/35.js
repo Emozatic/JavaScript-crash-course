@@ -9,4 +9,4 @@ greet()
 function calculate(price, discount= 0){
     console.log(price-discount);
 }
-calculate(1000)
+calculate(1000);
