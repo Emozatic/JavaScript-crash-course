@@ -14,3 +14,14 @@ let user2= {
     city:"kalka"
 }
 console.log(user2)
+
+//activity
+let product= {
+    name:"Laptop",
+    price:50000,
+}
+let updatedProduct={
+    ...product,
+    brand:"Dell"
+}
+console.log(updatedProduct);
