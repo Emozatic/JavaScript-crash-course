@@ -123,13 +123,31 @@ console.log(user2);
 // car1.stop();
 
 //activity
+// class Animal{
+//     eat(){
+//         console.log("Animal is eating");
+//     }
+// }
+// class Dog extends Animal{
+
+// }
+// let dog1= new Dog();
+// dog1.eat();
+
+//super keyword
 class Animal{
-    eat(){
-        console.log("Animal is eating");
+    constructor(name){
+        this.name= name;
     }
 }
 class Dog extends Animal{
-
+    constructor(name, breed){
+        super(name);
+        this.name= name;
+        this.breed=breed;
+        console.log(this.name)
+    }
 }
-let dog1= new Dog();
-dog1.eat();
+
+let animal= new Animal("tommy");
+console.log(animal)
