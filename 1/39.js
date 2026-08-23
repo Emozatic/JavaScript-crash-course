@@ -81,27 +81,43 @@ console.log(user2);
 
 
 //activity 6
-class BankAccount{
-    #balance;
-    constructor(balance){
-        this.#balance= balance;
+// class BankAccount{
+//     #balance;
+//     constructor(balance){
+//         this.#balance= balance;
+//     }
+//     showBalance(){
+//         console.log(`balance is= ${this.#balance}`)
+//     }
+//     deposite(amount){
+//         this.#balance= this.#balance+amount
+//     }
+//     withdraw(amount){
+//         if(this.#balance<amount){
+//             console.log("insuffiecient balance");
+//         }
+//         else{
+//             this.#balance-=amount;
+//         }
+//     }
+// }
+// let bank= new BankAccount(5000);
+// bank.deposite(2000);
+// bank.withdraw(1000);
+// bank.showBalance();
+
+//inheritence
+class Vehicle{
+    start(){
+        console.log("vehicle started");
     }
-    showBalance(){
-        console.log(`balance is= ${this.#balance}`)
-    }
-    deposite(amount){
-        this.#balance= this.#balance+amount
-    }
-    withdraw(amount){
-        if(this.#balance<amount){
-            console.log("insuffiecient balance");
-        }
-        else{
-            this.#balance-=amount;
-        }
+    stop(){
+        console.log("vehicle stopped");
     }
 }
-let bank= new BankAccount(5000);
-bank.deposite(2000);
-bank.withdraw(1000);
-bank.showBalance();
+class Car extends Vehicle{
+
+}
+let car1= new Car();
+car1.start();
+car1.stop();
