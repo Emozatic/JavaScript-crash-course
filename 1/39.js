@@ -235,9 +235,73 @@
 // console.log(user.welcome())
 
 //activity
-class Maths{
-    static add(a,b){
-        return a+b;
+// class Maths{
+//     static add(a,b){
+//         return a+b;
+//     }
+// }
+// console.log(Maths.add(2,3));
+
+//getter and setter
+// class User{
+//     constructor(name){
+//         this._name= name;
+//     }    
+//         get name(){
+//             return this._name;
+//         }
+//         set name(newName){
+//             this._name= newName;
+//         }
+    
+// }
+// let user = new User("Lucky");
+// console.log(user.name);
+// user.name= "Rahul";
+// console.log(user.name);
+
+//activity 
+// class Person{
+//     constructor(name){
+//         this._name= name;
+//     }
+//     get name(){
+//         return this._name;
+//     }
+//     set name(newName){
+//         if(newName=" "){
+//             console.log("invalid name")
+//         }
+//         else{
+//             this._name= newName;
+//         }
+//     }
+// }
+
+// let person= new Person("Lucky");
+// console.log(person.name);
+// person.name= "Rahul";
+// console.log(person.name);
+// person.name="";
+
+//polymorphism
+class Shape{
+    area(){
+        console.log("calculating area");
     }
 }
-console.log(Maths.add(2,3));
+class Circle extends Shape{
+    area(){
+        console.log("circle area");
+    }
+}
+class Rectangle extends Shape{
+    area(){
+        console.log("rectangle area");
+    }
+}
+
+let circle= new Circle();
+let rectangle = new Rectangle();
+circle.area();
+rectangle.area();
