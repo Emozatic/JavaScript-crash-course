@@ -24,3 +24,17 @@ console.log(user2);
 // let car2= new Car();
 // //console.log(car1);
 // console.log(car2);
+
+//activity 3
+class Student{
+    constructor(name, age, course){
+        this.name= name;
+        this.age= age;
+        this.course= course;
+    }
+}
+
+let student1= new Student("Lucky", 21, "MCA");
+let student2= new Student("Rocky", 19, "BBA");
+console.log(student1);
+console.log(student2);
