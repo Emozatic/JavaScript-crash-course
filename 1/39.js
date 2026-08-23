@@ -40,15 +40,59 @@ console.log(user2);
 // console.log(student2);
 
 //activity 4
-class Car{
-    constructor(brand,model ){
-        this.brand= brand;
-        this.model= model;
+// class Car{
+//     constructor(brand,model ){
+//         this.brand= brand;
+//         this.model= model;
+//     }
+//     start(){
+//         console.log(`${this.brand} ${this.model} is starting`);
+//     }
+// }
+
+// let car1= new Car("Mahindra", "Scorpio");
+// car1.start();
+
+//activity 5
+// class BankAccount{
+//     constructor(name, balance){
+//         this.name= name;
+//         this.balance= balance;
+//     }
+//     deposite(amount){
+//         this.balance= this.balance+amount
+//     }
+//     showBalance(){
+//         console.log(this.balance)
+//     }
+//     withdraw(amount){
+//         if(amount> this.balance){
+//             console.log("Insufficient balance");
+//         }
+//         else{
+//             this.balance= this.balance-amount
+//         }
+//     }
+// }
+
+// let bank= new BankAccount("Lucky", 5000);
+// bank.withdraw(3000)
+// bank.showBalance()
+
+
+//activity 6
+class BankAccount{
+    #balance;
+    constructor(balance){
+        this.#balance= balance;
     }
-    start(){
-        console.log(`${this.brand} ${this.model} is starting`);
+    showBalance(){
+        console.log(`balance is= ${this.#balance}`)
+    }
+    deposite(amount){
+        this.#balance= this.#balance+amount
     }
 }
-
-let car1= new Car("Mahindra", "Scorpio");
-car1.start();
+let bank= new BankAccount(5000);
+bank.deposite(2000);
+bank.showBalance();
