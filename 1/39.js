@@ -307,28 +307,48 @@
 // rectangle.area();
 
 //abstraction
-class CoffeeMachine{
-    #boilWater(){
-        console.log("water is boiling");
+// class CoffeeMachine{
+//     #boilWater(){
+//         console.log("water is boiling");
+//     }
+//     makeCoffee(){
+//         this.#boilWater();
+//         console.log("coffee ready");
+//     }
+// }
+
+// let coffee= new CoffeeMachine();
+// coffee.makeCoffee();
+
+// //activity
+// class Payment{
+//     #validate(){
+//         console.log("payment validation")
+//     }
+//     pay(){
+//         this.#validate();
+//         console.log("payment successfull");
+//     }
+// }
+// let pay= new Payment();
+// pay.pay();
+
+//task1
+class BankAccount{
+    #balance;
+    constructor(owner, balance){
+        this.owner= owner;
+        this.#balance= balance;
     }
-    makeCoffee(){
-        this.#boilWater();
-        console.log("coffee ready");
+    deposit(amount){
+        if(amount>0){
+        this.#balance+=amount;
+        }
+        else{
+            console.log("invalid")
+        }
+
     }
 }
-
-let coffee= new CoffeeMachine();
-coffee.makeCoffee();
-
-//activity
-class Payment{
-    #validate(){
-        console.log("payment validation")
-    }
-    pay(){
-        this.#validate();
-        console.log("payment successfull");
-    }
-}
-let pay= new Payment();
-pay.pay();
+let account= new BankAccount("Lucky", 2000);
+account.deposit(2000)
