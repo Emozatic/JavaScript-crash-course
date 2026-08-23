@@ -107,17 +107,29 @@ console.log(user2);
 // bank.showBalance();
 
 //inheritence
-class Vehicle{
-    start(){
-        console.log("vehicle started");
-    }
-    stop(){
-        console.log("vehicle stopped");
+// class Vehicle{
+//     start(){
+//         console.log("vehicle started");
+//     }
+//     stop(){
+//         console.log("vehicle stopped");
+//     }
+// }
+// class Car extends Vehicle{
+
+// }
+// let car1= new Car();
+// car1.start();
+// car1.stop();
+
+//activity
+class Animal{
+    eat(){
+        console.log("Animal is eating");
     }
 }
-class Car extends Vehicle{
+class Dog extends Animal{
 
 }
-let car1= new Car();
-car1.start();
-car1.stop();
+let dog1= new Dog();
+dog1.eat();
