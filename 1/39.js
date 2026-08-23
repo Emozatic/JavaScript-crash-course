@@ -26,15 +26,29 @@ console.log(user2);
 // console.log(car2);
 
 //activity 3
-class Student{
-    constructor(name, age, course){
-        this.name= name;
-        this.age= age;
-        this.course= course;
+// class Student{
+//     constructor(name, age, course){
+//         this.name= name;
+//         this.age= age;
+//         this.course= course;
+//     }
+// }
+
+// let student1= new Student("Lucky", 21, "MCA");
+// let student2= new Student("Rocky", 19, "BBA");
+// console.log(student1);
+// console.log(student2);
+
+//activity 4
+class Car{
+    constructor(brand,model ){
+        this.brand= brand;
+        this.model= model;
+    }
+    start(){
+        console.log(`${this.brand} ${this.model} is starting`);
     }
 }
 
-let student1= new Student("Lucky", 21, "MCA");
-let student2= new Student("Rocky", 19, "BBA");
-console.log(student1);
-console.log(student2);
+let car1= new Car("Mahindra", "Scorpio");
+car1.start();
