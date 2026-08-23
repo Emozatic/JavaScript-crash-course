@@ -92,7 +92,16 @@ class BankAccount{
     deposite(amount){
         this.#balance= this.#balance+amount
     }
+    withdraw(amount){
+        if(this.#balance<amount){
+            console.log("insuffiecient balance");
+        }
+        else{
+            this.#balance-=amount;
+        }
+    }
 }
 let bank= new BankAccount(5000);
 bank.deposite(2000);
+bank.withdraw(1000);
 bank.showBalance();
