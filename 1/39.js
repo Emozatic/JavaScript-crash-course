@@ -195,16 +195,33 @@
 // cat.speak();
 
 //super.method override
-class Animal {
-    speak(){
-        console.log("animal speaks");
-    }
-}
-class Dog extends Animal{
-    speak(){
-        super.speak();
-        console.log("dog barks");
-    }
-}
-let dog= new Dog();
-dog.speak();
+// class Animal {
+//     speak(){
+//         console.log("animal speaks");
+//     }
+// }
+// class Dog extends Animal{
+//     speak(){
+//         super.speak();
+//         console.log("dog barks");
+//     }
+// }
+// let dog= new Dog();
+// dog.speak();
+
+//activity
+// class Car{
+//     start(){
+//         console.log("car is starting");
+//     }
+// }
+// class electricCar extends Car{
+//     start(){
+//         super.start();
+//         console.log("electric is started");
+//     }
+// }
+// let car= new electricCar();
+// car.start()
+
+//static method
