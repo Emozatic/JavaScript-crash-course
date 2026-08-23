@@ -225,3 +225,19 @@
 // car.start()
 
 //static method
+// class User{
+//     static welcome(){
+//         console.log("welcome to our app");
+//     }
+// }
+// User.welcome()
+// let user= new User();
+// console.log(user.welcome())
+
+//activity
+class Maths{
+    static add(a,b){
+        return a+b;
+    }
+}
+console.log(Maths.add(2,3));
