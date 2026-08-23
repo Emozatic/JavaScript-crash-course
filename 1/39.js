@@ -135,19 +135,40 @@ console.log(user2);
 // dog1.eat();
 
 //super keyword
+// class Animal{
+//     constructor(name){
+//         this.name= name;
+//     }
+// }
+// class Dog extends Animal{
+//     constructor(name, breed){
+//         super(name);
+//         this.name= name;
+//         this.breed=breed;
+//         console.log(this.name)
+//     }
+// }
+
+// let animal= new Animal("tommy");
+// console.log(animal)
+
+//activity
 class Animal{
     constructor(name){
-        this.name= name;
+        this.name=name;
+    }
+    eat(){
+        console.log(`${this.name} is eating`);
     }
 }
 class Dog extends Animal{
     constructor(name, breed){
         super(name);
         this.name= name;
-        this.breed=breed;
-        console.log(this.name)
+        this.breed= breed;
     }
 }
-
-let animal= new Animal("tommy");
-console.log(animal)
+let dog= new Dog("Tommy", "Gernam Shephered");
+console.log(dog.name);
+console.log(dog.breed);
+dog.eat();
