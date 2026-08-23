@@ -285,23 +285,50 @@
 // person.name="";
 
 //polymorphism
-class Shape{
-    area(){
-        console.log("calculating area");
+// class Shape{
+//     area(){
+//         console.log("calculating area");
+//     }
+// }
+// class Circle extends Shape{
+//     area(){
+//         console.log("circle area");
+//     }
+// }
+// class Rectangle extends Shape{
+//     area(){
+//         console.log("rectangle area");
+//     }
+// }
+
+// let circle= new Circle();
+// let rectangle = new Rectangle();
+// circle.area();
+// rectangle.area();
+
+//abstraction
+class CoffeeMachine{
+    #boilWater(){
+        console.log("water is boiling");
     }
-}
-class Circle extends Shape{
-    area(){
-        console.log("circle area");
-    }
-}
-class Rectangle extends Shape{
-    area(){
-        console.log("rectangle area");
+    makeCoffee(){
+        this.#boilWater();
+        console.log("coffee ready");
     }
 }
 
-let circle= new Circle();
-let rectangle = new Rectangle();
-circle.area();
-rectangle.area();
+let coffee= new CoffeeMachine();
+coffee.makeCoffee();
+
+//activity
+class Payment{
+    #validate(){
+        console.log("payment validation")
+    }
+    pay(){
+        this.#validate();
+        console.log("payment successfull");
+    }
+}
+let pay= new Payment();
+pay.pay();
