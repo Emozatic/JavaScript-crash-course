@@ -1,15 +1,15 @@
 //classes and objects
-class User{
-    constructor(name, age){
-        this.name= name;
-        this.age= age;
-    }
-}
+// class User{
+//     constructor(name, age){
+//         this.name= name;
+//         this.age= age;
+//     }
+// }
 
-let user1= new User("Lucky", 21);
-let user2= new User("Rahul", 25);
-console.log(user1);
-console.log(user2);
+// let user1= new User("Lucky", 21);
+// let user2= new User("Rahul", 25);
+// console.log(user1);
+// console.log(user2);
 
 
 //activity 2
@@ -153,22 +153,58 @@ console.log(user2);
 // console.log(animal)
 
 //activity
-class Animal{
-    constructor(name){
-        this.name=name;
-    }
-    eat(){
-        console.log(`${this.name} is eating`);
+// class Animal{
+//     constructor(name){
+//         this.name=name;
+//     }
+//     eat(){
+//         console.log(`${this.name} is eating`);
+//     }
+// }
+// class Dog extends Animal{
+//     constructor(name, breed){
+//         super(name);
+//         this.name= name;
+//         this.breed= breed;
+//     }
+// }
+// let dog= new Dog("Tommy", "Gernam Shephered");
+// console.log(dog.name);
+// console.log(dog.breed);
+// dog.eat();
+
+//activity for method overriding
+// class Animal{
+//     speak(){
+//         console.log("animal is speaking");
+//     }
+// }
+// class Dog extends Animal{
+//     speak(){
+//         console.log("dog barks");
+//     }
+// }
+// class Cat extends Animal{
+//     speak(){
+//         console.log("cat meowing");
+//     }
+// }
+// let dog= new Dog();
+// let cat= new Cat();
+// dog.speak();
+// cat.speak();
+
+//super.method override
+class Animal {
+    speak(){
+        console.log("animal speaks");
     }
 }
 class Dog extends Animal{
-    constructor(name, breed){
-        super(name);
-        this.name= name;
-        this.breed= breed;
+    speak(){
+        super.speak();
+        console.log("dog barks");
     }
 }
-let dog= new Dog("Tommy", "Gernam Shephered");
-console.log(dog.name);
-console.log(dog.breed);
-dog.eat();
+let dog= new Dog();
+dog.speak();
