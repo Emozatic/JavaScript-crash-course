@@ -456,13 +456,40 @@
 
 
 //task 6
-class MathHelper{
-    static add(a,b){
-        return a+b;
+// class MathHelper{
+//     static add(a,b){
+//         return a+b;
+//     }
+//     static multiply(a,b){
+//         return a*b;
+//     }
+// }
+// console.log(MathHelper.add(2,3));
+// console.log(MathHelper.multiply(2,3));
+
+
+//task 7
+class Employee{
+    constructor(name,salary){
+        this.name= name;
+        this.salary=salary;
     }
-    static multiply(a,b){
-        return a*b;
+    get salary(){
+        return this._salary;
+    }
+    set salary(newSalary){
+        if(newSalary>0){
+            this._salary= newSalary;
+        }
+        else{
+            console.log("invalid");
+        }
     }
 }
-console.log(MathHelper.add(2,3));
-console.log(MathHelper.multiply(2,3));
+let emp= new Employee("Lucky", 50000);
+console.log(emp.salary);
+
+emp.salary= 60000;
+console.log(emp.salary);
+
+emp.salary=-10000
