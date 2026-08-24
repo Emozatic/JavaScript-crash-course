@@ -381,28 +381,52 @@
 // product3.showProduct();
 
 //task3
-class Product{
-    #price;
-    constructor(name,price){
-        this.name= name;
-        this.#price= price;
+// class Product{
+//     #price;
+//     constructor(name,price){
+//         this.name= name;
+//         this.#price= price;
+//     }
+//     setPrice(price){
+//         if(price>0){
+//             this.#price=price;
+//         }
+//         else{
+//             console.log("invalid")
+//         }
+//     }
+//     getPrice(){
+//         return this.#price;
+//     }
+// }
+// let product= new Product("Laptop", 500000);
+// console.log(product.getPrice());
+
+// product.setPrice(550000);
+// console.log(product.getPrice());
+
+// product.setPrice(-100)
+
+//task 4
+class Vehicle{
+    constructor(brand){
+        this.brand= brand;
     }
-    setPrice(price){
-        if(price>0){
-            this.#price=price;
-        }
-        else{
-            console.log("invalid")
-        }
-    }
-    getPrice(){
-        return this.#price;
+    start(){
+        console.log("vehicle started");
     }
 }
-let product= new Product("Laptop", 500000);
-console.log(product.getPrice());
+class Car extends Vehicle{
+    constructor(brand, model){
+        super(brand);
+        this.model= model;
+    }
+    showCar(){
+        console.log(`brand: ${this.brand}`)
+        console.log(`model: ${this.model}`)
+    }
+}
 
-product.setPrice(550000);
-console.log(product.getPrice());
-
-product.setPrice(-100)
+let car= new Car("mahindra", "scorpio");
+car.start();
+car.showCar()
