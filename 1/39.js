@@ -334,21 +334,43 @@
 // pay.pay();
 
 //task1
-class BankAccount{
-    #balance;
-    constructor(owner, balance){
-        this.owner= owner;
-        this.#balance= balance;
-    }
-    deposit(amount){
-        if(amount>0){
-        this.#balance+=amount;
-        }
-        else{
-            console.log("invalid")
-        }
+// class BankAccount{
+//     #balance;
+//     constructor(owner, balance){
+//         this.owner= owner;
+//         this.#balance= balance;
+//     }
+//     deposit(amount){
+//         if(amount>0){
+//         this.#balance+=amount;
+//         }
+//         else{
+//             console.log("invalid")
+//         }
 
+//     }
+// }
+// let account= new BankAccount("Lucky", 2000);
+// account.deposit(2000)
+
+
+//task 2
+class Product{
+    constructor(name,price,quantity){
+        this.name= name;
+        this.price= price;
+        this.quantity= quantity;
+    }
+    getTotal(){
+        return this.price*this.quantity;
+    }
+    showProduct(){
+        console.log(`name= ${this.name}`);
+        console.log(`price= ${this.price}`);
+        console.log(`quantity= ${this.quantity}`);
     }
 }
-let account= new BankAccount("Lucky", 2000);
-account.deposit(2000)
+let product= new Product("Laptop", 100000, 2);
+
+console.log(product.getTotal());
+product.showProduct();
