@@ -469,27 +469,68 @@
 
 
 //task 7
-class Employee{
-    constructor(name,salary){
-        this.name= name;
-        this.salary=salary;
+// class Employee{
+//     constructor(name,salary){
+//         this.name= name;
+//         this.salary=salary;
+//     }
+//     get salary(){
+//         return this._salary;
+//     }
+//     set salary(newSalary){
+//         if(newSalary>0){
+//             this._salary= newSalary;
+//         }
+//         else{
+//             console.log("invalid");
+//         }
+//     }
+// }
+// let emp= new Employee("Lucky", 50000);
+// console.log(emp.salary);
+
+// emp.salary= 60000;
+// console.log(emp.salary);
+
+// emp.salary=-10000
+
+//task8
+class Vehicle{
+    #pricePerDay;
+    constructor(brand, model, pricePerDay){
+        this.brand= brand;
+        this.model= model;
+        this.#pricePerDay= pricePerDay;
     }
-    get salary(){
-        return this._salary;
+    getPrice(){
+        return this.#pricePerDay;
     }
-    set salary(newSalary){
-        if(newSalary>0){
-            this._salary= newSalary;
-        }
-        else{
-            console.log("invalid");
-        }
+    calculateRent(days){
+        return this.#pricePerDay*days;
+    }
+    showDetails(){
+        console.log(`brand=${this.brand} model= ${this.model}`);
     }
 }
-let emp= new Employee("Lucky", 50000);
-console.log(emp.salary);
 
-emp.salary= 60000;
-console.log(emp.salary);
+class Car extends Vehicle{
+    constructor(brand, model, pricePerDay,seats){
+        super(brand, model, pricePerDay);
+        this.seats= seats
+    }
+    showDetails(){
+        super.showDetails();
+        console.log("car details");
+        console.log(`seats= ${this.seats}`);
+   }
+}
+class vehicleRent{
+    static welcome(){
+        console.log("Welcome to vehicle rental");
+    }
+}
 
-emp.salary=-10000
+vehicleRent.welcome();
+let car= new Car("Mahindra", "Bolero", 2000, 7);
+car.showDetails();
+console.log(car.calculateRent(3));
