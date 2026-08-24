@@ -408,6 +408,30 @@
 // product.setPrice(-100)
 
 //task 4
+// class Vehicle{
+//     constructor(brand){
+//         this.brand= brand;
+//     }
+//     start(){
+//         console.log("vehicle started");
+//     }
+// }
+// class Car extends Vehicle{
+//     constructor(brand, model){
+//         super(brand);
+//         this.model= model;
+//     }
+//     showCar(){
+//         console.log(`brand: ${this.brand}`)
+//         console.log(`model: ${this.model}`)
+//     }
+// }
+
+// let car= new Car("mahindra", "scorpio");
+// car.start();
+// car.showCar()
+
+//task 5
 class Vehicle{
     constructor(brand){
         this.brand= brand;
@@ -421,12 +445,11 @@ class Car extends Vehicle{
         super(brand);
         this.model= model;
     }
-    showCar(){
-        console.log(`brand: ${this.brand}`)
-        console.log(`model: ${this.model}`)
+    start(){
+        super.start();
+        console.log("car is started")
     }
 }
 
 let car= new Car("mahindra", "scorpio");
 car.start();
-car.showCar()
