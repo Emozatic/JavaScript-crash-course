@@ -432,24 +432,37 @@
 // car.showCar()
 
 //task 5
-class Vehicle{
-    constructor(brand){
-        this.brand= brand;
-    }
-    start(){
-        console.log("vehicle started");
-    }
-}
-class Car extends Vehicle{
-    constructor(brand, model){
-        super(brand);
-        this.model= model;
-    }
-    start(){
-        super.start();
-        console.log("car is started")
-    }
-}
+// class Vehicle{
+//     constructor(brand){
+//         this.brand= brand;
+//     }
+//     start(){
+//         console.log("vehicle started");
+//     }
+// }
+// class Car extends Vehicle{
+//     constructor(brand, model){
+//         super(brand);
+//         this.model= model;
+//     }
+//     start(){
+//         super.start();
+//         console.log("car is started")
+//     }
+// }
 
-let car= new Car("mahindra", "scorpio");
-car.start();
+// let car= new Car("mahindra", "scorpio");
+// car.start();
+
+
+//task 6
+class MathHelper{
+    static add(a,b){
+        return a+b;
+    }
+    static multiply(a,b){
+        return a*b;
+    }
+}
+console.log(MathHelper.add(2,3));
+console.log(MathHelper.multiply(2,3));
