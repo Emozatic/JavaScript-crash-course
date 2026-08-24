@@ -355,27 +355,54 @@
 
 
 //task 2
+// class Product{
+//     constructor(name,price,quantity){
+//         this.name= name;
+//         this.price= price;
+//         this.quantity= quantity;
+//     }
+//     getTotal(){
+//         return this.price*this.quantity;
+//     }
+//     showProduct(){
+//         console.log(`name= ${this.name}`);
+//         console.log(`price= ${this.price}`);
+//         console.log(`quantity= ${this.quantity}`);
+//     }
+// }
+// let product= new Product("Laptop", 100000, 2);
+// let product2= new Product("Mouse", 500, 5);
+// let product3= new Product("Keyboard", 1500, 3);
+// console.log(product.getTotal());
+// console.log(product2.getTotal());
+// console.log(product3.getTotal())
+// product.showProduct();
+// product2.showProduct();
+// product3.showProduct();
+
+//task3
 class Product{
-    constructor(name,price,quantity){
+    #price;
+    constructor(name,price){
         this.name= name;
-        this.price= price;
-        this.quantity= quantity;
+        this.#price= price;
     }
-    getTotal(){
-        return this.price*this.quantity;
+    setPrice(price){
+        if(price>0){
+            this.#price=price;
+        }
+        else{
+            console.log("invalid")
+        }
     }
-    showProduct(){
-        console.log(`name= ${this.name}`);
-        console.log(`price= ${this.price}`);
-        console.log(`quantity= ${this.quantity}`);
+    getPrice(){
+        return this.#price;
     }
 }
-let product= new Product("Laptop", 100000, 2);
-let product2= new Product("Mouse", 500, 5);
-let product3= new Product("Keyboard", 1500, 3);
-console.log(product.getTotal());
-console.log(product2.getTotal());
-console.log(product3.getTotal())
-product.showProduct();
-product2.showProduct();
-product3.showProduct();
+let product= new Product("Laptop", 500000);
+console.log(product.getPrice());
+
+product.setPrice(550000);
+console.log(product.getPrice());
+
+product.setPrice(-100)
