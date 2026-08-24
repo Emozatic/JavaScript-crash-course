@@ -371,6 +371,11 @@ class Product{
     }
 }
 let product= new Product("Laptop", 100000, 2);
-
+let product2= new Product("Mouse", 500, 5);
+let product3= new Product("Keyboard", 1500, 3);
 console.log(product.getTotal());
+console.log(product2.getTotal());
+console.log(product3.getTotal())
 product.showProduct();
+product2.showProduct();
+product3.showProduct();
